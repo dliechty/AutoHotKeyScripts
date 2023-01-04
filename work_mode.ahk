@@ -5,7 +5,7 @@ SetWorkingDir A_InitialWorkingDir  ; Ensures a consistent starting directory.
 SendMode "Input"
 CoordMode("Mouse")
 
-F14::
+F15::
 {
     Send("^#{Right}") ; move to virtual desktop 2
     Sleep(100) ; wait for active windows to register
@@ -15,7 +15,7 @@ F14::
     OutlookStart()
 }
 
-F15::
+F16::
 {
     Send("^#{Right}") ; move to virtual desktop 2 (probably already there)
     Sleep(100) ; wait for active windows to register

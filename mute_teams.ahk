@@ -4,7 +4,7 @@
 SetWorkingDir A_InitialWorkingDir  ; Ensures a consistent starting directory.
 SendMode "Input"
 
-F16::
+F14::
 {
     TeamsWindows := WinGetList("ahk_exe Teams.exe")			;get IDs for all teams windows
     for id in TeamsWindows 							;Loop through IDs of all teams windows
