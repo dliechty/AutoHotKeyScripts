@@ -35,6 +35,13 @@ IntellijStop()
     {
         WinClose(IntellijName)
     }
+
+    DataGripName := "ahk_exe datagrip64.exe"
+
+    while WinExist(DataGripName) ; keep looping until all datagrip windows are closed
+    {
+        WinClose(DataGripName)
+    }
 }
 
 ToDo(isStart := true)
