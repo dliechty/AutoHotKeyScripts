@@ -112,9 +112,9 @@ Outlook(isStart := true)
             Run "C:\nextgate\shortcuts\Outlook.lnk"
             if WinWaitActive(OutlookName, , 10, "Opening") {
                 Send("#{Left}")
-                Sleep(500)
+                Sleep(1000)
                 MouseClick("R", 20, 100) ; open calendar right-click menu
-                Sleep(500)
+                Sleep(1000)
                 MouseClick("L", 100, 125) ; open calendar as separate window
 
                 SetTitleMatchMode "RegEx" ; allow regex matching
