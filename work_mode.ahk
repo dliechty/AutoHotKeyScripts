@@ -160,8 +160,8 @@ Terminal(isStart := true)
             ;if WinWaitActive(TerminalName, , 5) {
             ;    Send("#+{Left}") ; move terminal to left-most monitor
             ;}
-            else
-                MsgBox "Terminal timed out."
+            ;else
+            ;   MsgBox "Terminal timed out."
         }
     } else {
         if WinExist(TerminalName) {
