@@ -157,9 +157,9 @@ Terminal(isStart := true)
     if (isStart = true) {
         if not WinExist(TerminalName) {
             Run "C:\nextgate\shortcuts\Terminal.lnk", , "Max"
-            if WinWaitActive(TerminalName, , 5) {
-                Send("#+{Left}") ; move terminal to left-most monitor
-            }
+            ;if WinWaitActive(TerminalName, , 5) {
+            ;    Send("#+{Left}") ; move terminal to left-most monitor
+            ;}
             else
                 MsgBox "Terminal timed out."
         }
