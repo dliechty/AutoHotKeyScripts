@@ -113,9 +113,9 @@ Outlook(isStart := true)
             if WinWaitActive(OutlookName, , 10, "Opening") {
                 Send("#{Left}")
                 Sleep(1000)
-                MouseClick("R", 20, 100) ; open calendar right-click menu
-                Sleep(1000)
-                MouseClick("L", 100, 125) ; open calendar as separate window
+                ;MouseClick("R", 20, 100) ; open calendar right-click menu
+                ;Sleep(1000)
+                ;MouseClick("L", 100, 125) ; open calendar as separate window
 
                 SetTitleMatchMode "RegEx" ; allow regex matching
                 if WinWaitActive(OutlookCalName, , 5) {
