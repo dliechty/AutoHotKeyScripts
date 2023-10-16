@@ -75,7 +75,7 @@ ToDoStop()
 
 Teams(isStart := true)
 {
-    TeamsName := "Microsoft Teams"
+    TeamsName := "| Microsoft Teams"
 
     if (isStart = true) {
         if not WinExist(TeamsName) {
@@ -104,7 +104,7 @@ TeamsStop()
 
 Outlook(isStart := true)
 {
-    OutlookName := "Outlook"
+    OutlookName := "- Outlook"
     OutlookCalName := "^Calendar.*Outlook$"
 
     if (isStart = true) {
