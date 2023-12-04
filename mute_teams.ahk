@@ -13,8 +13,9 @@ F14::
 
         if Title != "Microsoft Teams" && Title != ""		;make sure title is not the notification or sharing window
         {
-            WinActivate("ahk_id " . id)				;This should be the correct win, activate it
+            WinActivate("ahk_id " . id)				;Move to any acceptable teams win, activate it
             Send("^M")								;send ctrl,shift,m shortcut
+            break
         }
     }
 }
