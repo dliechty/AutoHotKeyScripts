@@ -11,6 +11,7 @@ F15::
     Sleep(100) ; wait for active windows to register
     TerminalStart()
     ToDoStart()
+    LogseqStart()
     TeamsStart()
     OutlookStart()
 }
@@ -22,6 +23,7 @@ F16::
     TerminalStop()
     IntellijStop()
     ToDoStop()
+    LogseqStop()
     TeamsStop()
     OutlookStop()
     Send("^#{Left}")
@@ -71,6 +73,35 @@ ToDoStart()
 ToDoStop()
 {
     ToDo(false)
+}
+
+Logseq(isStart := true)
+{
+    LogseqName := "Logseq"
+
+    if (isStart = true) {
+        if not WinExist(Logseq) {
+            Run "C:\nextgate\shortcuts\Logseq.lnk"
+            if WinWaitActive(LogseqName, , 5)
+                Send("#{Right}")
+            else
+                MsgBox "Logseq timed out."
+        }
+    } else {
+        if WinExist(LogseqName) {
+            WinClose(LogseqName)
+        }
+    }
+}
+
+LogseqStart()
+{
+    Logseq()
+}
+
+LogseqStop()
+{
+    Logseq(false)
 }
 
 Teams(isStart := true)
