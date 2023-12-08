@@ -80,7 +80,7 @@ Logseq(isStart := true)
     LogseqName := "Logseq"
 
     if (isStart = true) {
-        if not WinExist(Logseq) {
+        if not WinExist(LogseqName) {
             Run "C:\nextgate\shortcuts\Logseq.lnk"
             if WinWaitActive(LogseqName, , 5)
                 Send("#{Right}")
