@@ -82,7 +82,7 @@ Logseq(isStart := true)
     if (isStart = true) {
         if not WinExist(LogseqName) {
             Run "C:\nextgate\shortcuts\Logseq.lnk"
-            if WinWaitActive(LogseqName, , 5)
+            if WinWaitActive(LogseqName, , 10)
                 Send("#{Right}")
             else
                 MsgBox "Logseq timed out."
