@@ -77,7 +77,7 @@ ToDoStop()
 
 Logseq(isStart := true)
 {
-    LogseqName := "Logseq"
+    LogseqName := "ahk_exe Logseq.exe"
 
     if (isStart = true) {
         if not WinExist(LogseqName) {
