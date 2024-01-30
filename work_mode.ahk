@@ -10,7 +10,7 @@ F15::
     Send("^#{Right}") ; move to virtual desktop 2
     Sleep(100) ; wait for active windows to register
     TerminalStart()
-    ToDoStart()
+    ; ToDoStart() disable for now
     LogseqStart()
     TeamsStart()
     OutlookStart()
