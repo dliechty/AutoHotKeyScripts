@@ -13,6 +13,7 @@ F15::
     ; ToDoStart() disable for now
     LogseqStart()
     TeamsStart()
+    DockerStart()
     OutlookStart()
 }
 
@@ -20,6 +21,7 @@ F16::
 {
     Send("^#{Right}") ; move to virtual desktop 2 (probably already there)
     Sleep(100) ; wait for active windows to register
+    DockerStop()
     TerminalStop()
     IntellijStop()
     ToDoStop()
@@ -209,4 +211,29 @@ TerminalStart()
 TerminalStop()
 {
     Terminal(false)
+}
+
+Docker(isStart := true)
+{
+    DockerName := "ahk_exe Docker Desktop.exe"
+
+    if (isStart = true) {
+        if not WinExist(DockerName) {
+            Run "C:\nextgate\shortcuts\Docker.lnk"
+        }
+    } else {
+        if WinExist(DockerName) {
+            WinClose(DockerName)
+        }
+    }
+}
+
+DockerStart()
+{
+    Docker()
+}
+
+DockerStop()
+{
+    Docker(false)
 }
