@@ -13,8 +13,8 @@ F15::
     ; ToDoStart() disable for now
     LogseqStart()
     TeamsStart()
-    DockerStart()
     OutlookStart()
+    DockerStart()
 }
 
 F16::
