@@ -10,8 +10,7 @@ F15::
     Send("^#{Right}") ; move to virtual desktop 2
     Sleep(100) ; wait for active windows to register
     TerminalStart()
-    ; ToDoStart() disable for now
-    LogseqStart()
+    ObsidianStart()
     TeamsStart()
     OutlookStart()
     DockerStart()
@@ -26,6 +25,7 @@ F16::
     IntellijStop()
     ToDoStop()
     LogseqStop()
+    ObsidianStop()
     TeamsStop()
     OutlookStop()
     Send("^#{Left}")
@@ -104,6 +104,35 @@ LogseqStart()
 LogseqStop()
 {
     Logseq(false)
+}
+
+Obsidian(isStart := true)
+{
+    ObsidianName := "ahk_exe Obsidian.exe"
+
+    if (isStart = true) {
+        if not WinExist(ObsidianName) {
+            Run "C:\nextgate\shortcuts\Obsidian.lnk"
+            if WinWaitActive(ObsidianName, , 10)
+                Send("#{Right}")
+            else
+                MsgBox "Obsidian timed out."
+        }
+    } else {
+        if WinExist(ObsidianName) {
+            WinClose(ObsidianName)
+        }
+    }
+}
+
+ObsidianStart()
+{
+    Obsidian()
+}
+
+ObsidianStop()
+{
+    Obsidian(false)
 }
 
 Teams(isStart := true)
