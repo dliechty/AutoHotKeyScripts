@@ -11,7 +11,7 @@ F14::
     {
         Title := WinGetTitle("ahk_id " . id)			;get the title of the current window
 
-        if Title != "Microsoft Teams" && Title != ""		;make sure title is not the notification or sharing window
+        if Title != "Microsoft Teams" && Title != "" &&	InStr(Title, "Chat") != 1	;make sure title is not the notification or sharing window or chat
         {
             WinActivate("ahk_id " . id)				;Move to any acceptable teams win, activate it
             Send("^M")								;send ctrl,shift,m shortcut
