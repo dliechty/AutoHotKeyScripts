@@ -180,6 +180,7 @@ Outlook(isStart := true)
                 MouseClick("L", 100, 110) ; open calendar as separate window
 
                 SetTitleMatchMode "RegEx" ; allow regex matching
+                WinActivate(OutlookCalName)
                 if WinWaitActive(OutlookCalName, , 5) {
                     Send("#{Right}")
                 }
