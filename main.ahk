@@ -9,6 +9,7 @@ SetMouseDelay 40
 #Include <hotstrings>
 
 #Include <mute_teams>
+#Include <look_up>
 #Include <work_mode>
 #Include <sites>
 
