@@ -4,8 +4,6 @@
 SetWorkingDir A_InitialWorkingDir  ; Ensures a consistent starting directory.
 SendMode "Input"
 
-F13::look_up()
-
 google(service := 1)
 {
     static urls := { 0: ""

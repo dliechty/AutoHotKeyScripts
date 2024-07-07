@@ -5,7 +5,7 @@ SetWorkingDir A_InitialWorkingDir  ; Ensures a consistent starting directory.
 SendMode "Input"
 CoordMode("Mouse")
 
-F15::
+start_work()
 {
     Send("^#{Right}") ; move to virtual desktop 2
     Sleep(100) ; wait for active windows to register
@@ -16,7 +16,7 @@ F15::
     DockerStart()
 }
 
-F16::
+stop_work()
 {
     Send("^#{Right}") ; move to virtual desktop 2 (probably already there)
     Sleep(100) ; wait for active windows to register

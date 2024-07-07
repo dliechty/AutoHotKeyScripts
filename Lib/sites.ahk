@@ -4,7 +4,12 @@
 SetWorkingDir A_InitialWorkingDir  ; Ensures a consistent starting directory.
 SendMode "Input"
 
-F13::
+open_chatgpt()
+{
+    Run "https://chat.openai.com"
+}
+
+open_perplexity()
 {
     Run "https://www.perplexity.ai"
 }
