@@ -174,7 +174,7 @@ Outlook(isStart := true)
             Run "C:\nextgate\shortcuts\Outlook.lnk"
             if WinWaitActive(OutlookName, , 10, "Opening") {
                 Send("#{Left}")
-                Sleep(1000)
+                Sleep(2000)
                 MouseClick("R", 20, 110) ; open calendar right-click menu
                 Sleep(1000)
                 MouseClick("L", 100, 110) ; open calendar as separate window
