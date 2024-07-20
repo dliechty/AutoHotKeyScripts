@@ -141,7 +141,7 @@ Teams(isStart := true)
 
     if (isStart = true) {
         if not WinExist(TeamsName) {
-            Run "C:\nextgate\shortcuts\Teams.lnk"
+            Run "C:\nextgate\shortcuts\ms-teams.exe.lnk"
             if WinWaitActive(TeamsName, , 10, "Loading")
                 Send("#{Left}")
             else
@@ -171,7 +171,7 @@ Outlook(isStart := true)
 
     if (isStart = true) {
         if not WinExist(OutlookName) {
-            Run "C:\nextgate\shortcuts\Outlook.lnk"
+            Run "C:\nextgate\shortcuts\olk.exe.lnk"
             if WinWaitActive(OutlookName, , 10, "Opening") {
                 Send("#{Left}")
                 Sleep(2000)
@@ -220,7 +220,7 @@ Terminal(isStart := true)
 
     if (isStart = true) {
         if not WinExist(TerminalName) {
-            Run "C:\nextgate\shortcuts\Terminal.lnk", , "Max"
+            Run "C:\nextgate\shortcuts\WindowsTerminal.exe.lnk", , "Max"
             if WinWaitActive(TerminalName, , 5) {
                 Send("#+{Left}") ; move terminal to upper-most monitor
             }
@@ -250,7 +250,7 @@ Docker(isStart := true)
 
     if (isStart = true) {
         if not WinExist(DockerName) {
-            Run "C:\nextgate\shortcuts\Docker.lnk"
+            Run "C:\nextgate\shortcuts\Docker Desktop.exe.lnk"
         }
     } else {
         if WinExist(DockerName) {
