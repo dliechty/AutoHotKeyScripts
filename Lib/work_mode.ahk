@@ -112,7 +112,7 @@ Obsidian(isStart := true)
 
     if (isStart = true) {
         if not WinExist(ObsidianName) {
-            Run "C:\nextgate\shortcuts\Obsidian.lnk"
+            Run "C:\nextgate\shortcuts\Obsidian.exe.lnk"
             if WinWaitActive(ObsidianName, , 10)
                 Send("#{Right}")
             else
