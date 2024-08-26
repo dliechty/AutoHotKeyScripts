@@ -173,14 +173,14 @@ Outlook(isStart := true)
         if not WinExist(OutlookName) {
             Run "C:\nextgate\shortcuts\olk.exe.lnk"
             if WinWaitActive(OutlookName, , 10, "Opening") {
-                Send("#{Left}")
-                Sleep(2000)
+                Sleep(3000)
                 MouseClick("R", 20, 110) ; open calendar right-click menu
-                Sleep(1000)
+                Sleep(1250)
                 MouseClick("L", 100, 110) ; open calendar as separate window
 
                 SetTitleMatchMode "RegEx" ; allow regex matching
                 WinWait(OutlookCalName,, 5)
+                Sleep(1000)
                 WinActivate(OutlookCalName)
                 if WinWaitActive(OutlookCalName, , 5) {
                     Send("#{Right}")
