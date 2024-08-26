@@ -223,6 +223,8 @@ Terminal(isStart := true)
             Run "C:\nextgate\shortcuts\WindowsTerminal.exe.lnk", , "Max"
             if WinWaitActive(TerminalName, , 5) {
                 Send("#+{Left}") ; move terminal to upper-most monitor
+                Sleep(3000)
+                Send("stmux{Enter}")
             }
             else
                MsgBox "Terminal timed out."
