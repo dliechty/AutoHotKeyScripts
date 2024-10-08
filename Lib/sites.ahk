@@ -13,3 +13,8 @@ open_perplexity()
 {
     Run "https://www.perplexity.ai"
 }
+
+open_gemini()
+{
+    Run "https://gemini.google.com"
+}

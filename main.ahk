@@ -14,7 +14,7 @@ SetMouseDelay 40
 #Include <sites>
 
 F13::mute_teams()
-F14::open_chatgpt()
+F14::open_gemini()
 F15::open_perplexity()
 
 F17::google(1) ; Regular search
